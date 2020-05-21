@@ -658,12 +658,6 @@ tor_init(int argc, char *argv[])
   /* Initialize predicted ports list after loading options */
   predicted_ports_init();
 
-#ifndef _WIN32
-  if (geteuid()==0)
-    log_warn(LD_GENERAL,"You are running Tor as root. You don't need to, "
-             "and you probably shouldn't.");
-#endif
-
   if (crypto_global_init(options->HardwareAccel,
                          options->AccelName,
                          options->AccelDir)) {
