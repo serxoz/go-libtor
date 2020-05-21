@@ -21,7 +21,7 @@ before_script:
   - chmod 0600 ~/.ssh/id_rsa
 
   # Switch the entire repository over to master
-  - git remote add upstream git@github.com:ipsn/go-libtor.git
+  - git remote add upstream git@github.com:serxoz/go-libtor.git
   - git fetch upstream
   - git checkout master
 
